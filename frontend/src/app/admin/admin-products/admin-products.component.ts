@@ -20,8 +20,7 @@ export class AdminProductsComponent implements OnInit {
     private route: ActivatedRoute, private modalService: BsModalService) { }
 
   ngOnInit() {
-    this.productsService.getProducts().subscribe( r => { console.log(r);
-     this.products = r});
+    this.productsService.getAllProducts().subscribe( r => this.products = r);
   }
 
   openAddProduct(){

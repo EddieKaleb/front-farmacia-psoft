@@ -1,7 +1,7 @@
 const proxy = [
     {
       context: '/api',
-      target: 'https://cccpharma-backend.herokuapp.com/',
+      target: 'http://localhost:8080',
       pathRewrite: {'^/api' : ''}
     }
   ];

@@ -22,10 +22,6 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe(
       (params) => {this.productsService.getProductById(params['id'])
                       .subscribe(r => this.product = r)});
-
-                      let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        console.log( currentUser);
-        
   }
 
   addCart(){

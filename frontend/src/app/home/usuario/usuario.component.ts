@@ -4,7 +4,7 @@ import Reserva from 'src/app/model/reserva.module';
 import Venda from 'src/app/model/venda.module';
 import { ActivatedRoute } from '@angular/router';
 import { ReservasService } from 'src/app/service/reservas.service';
-
+import { UserService } from 'src/app/service/user.service';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
@@ -16,12 +16,16 @@ export class UsuarioComponent implements OnInit {
 
 
   constructor(private reservasService: ReservasService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private userService: UserService) { }
 
   ngOnInit() {
-    this.usuario =  JSON.parse(localStorage.getItem('currentUser'));
-    this.reservasService.getReservas(this.usuario.id).subscribe(r => this.reservas=r);
-
+    let user = JSON.parse(localStorage.getItem('currentUser'))
+    if (user) {
+      this.userService.getUser(user.id).subscribe((r) => {
+        this.usuario = r;
+      })
+    }
   }
 
 }

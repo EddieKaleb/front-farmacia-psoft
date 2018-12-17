@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalService } from 'ngx-bootstrap/modal';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/service/auth.service';
 
 @Component({
@@ -12,41 +12,31 @@ import { AuthenticationService } from 'src/app/service/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public modalRef =  new BsModalRef;
   statusLogin = false;
 
 
-  constructor(
-    private route: ActivatedRoute,
+  constructor(private modalService: BsModalService,
     private router: Router,
-    private modalService: BsModalService,
-    private authenticationService: AuthenticationService) { }
-
-
+    private authService: AuthenticationService) { }
 
   ngOnInit() {
-    this.teste();
+    if (localStorage.getItem('currentUser')) {
+      this.statusLogin = true;
+    }
   }
 
-  teste(){
-    this.statusLogin =  !JSON.parse(localStorage.getItem('currentUser'));
-  }
   openLogin() {
-    this.modalRef = this.modalService.show(LoginComponent);
-    this.modalRef.content.onClose.subscribe(result => {
-      this.ngOnInit();
-  })
-    this.ngOnInit();
+    this.modalService.show(LoginComponent);
   }
 
   openRegister() {
     this.modalService.show(RegisterComponent);
   }
 
-  logout(){
-    this.authenticationService.logout();
-    this.ngOnInit();
+  logout() {
+    this.router.navigate(['/']).then(() => {
+      this.authService.logout();
+      this.statusLogin = false;
+    })
   }
-
-
 }

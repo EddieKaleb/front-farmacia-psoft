@@ -20,11 +20,11 @@ export class ProductsService {
 
 
   getAllProducts(){
-    return this.http.get<any[]>(API_URL+'/estoques');
+    return this.http.get<any[]>(API_URL+'/produtos');
   }
 
   getProductsCategory(id){
-    return this.http.get<any[]>(API_URL+'/estoques/categoria/'+id);
+    return this.http.get<any[]>(API_URL+'/produtos/categoria/'+id);
   }
 
   getProductById(id){
@@ -41,10 +41,6 @@ export class ProductsService {
 
   deleteProduct(id){
     return this.http.delete<any>(API_URL+"/produtos/"+id);
-  }
-
-  getProducts(){
-    return this.http.get<any[]>(API_URL+'/produtos');
   }
 
 }
