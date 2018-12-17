@@ -1,0 +1,24 @@
+<main>
+  <img [src]="lot.produto.caminhoImagem">
+  <section>
+    <label  class="info">Produto ID</label>
+    <div> {{lot.produto.id}} </div>
+  </section>
+  <section>
+    <label  class="info">Qtd</label>
+    <div>{{lot.quantidade}}</div>
+  </section>
+  <section>
+    <label  class="info">GTIN</label>
+    <div>{{lot.gtin}}</div>
+  </section>
+  <section>
+    <label  class="info">Validade</label>
+    <div>{{lot.validade}}</div>
+  </section>
+  <section>
+    <label  class="info">Situação</label>
+    <div>{{lot.situacao.situacao}}</div>
+  </section>
+  <img id="remove" src="assets/img/cancel.png" (click)="delete()">
+</main>

@@ -1,0 +1,48 @@
+
+
+
+.shadow-1 {box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.050);}
+
+.grow:active {transform: scale(1.03);}
+
+.visi {visibility: hidden;}
+
+a:hover{cursor: pointer;}
+
+a:hover .visi {visibility: visible;}
+  
+
+
+.ml--2 {margin-left: -2rem;}
+
+.imgb { background-image: url("../../../../assets/img/mark.png")}
+
+.pt4 { padding-top: 17px}
+
+
+a{
+    height: 26rem;
+    width:18rem;
+    text-decoration: none;
+    position: relative;
+    padding-top:  1rem ;
+    display: inline-block;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.050);
+    margin-left:  2rem ;
+    margin-right: 2rem;
+    margin-top: 4rem ;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#indis{
+    color: #ff9f9f;
+}
+
+#sad{
+    max-height: 25px;
+    min-height: 5px;
+    width: auto;
+    height: auto;
+}
+

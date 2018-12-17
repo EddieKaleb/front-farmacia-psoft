@@ -1,0 +1,32 @@
+main {
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    margin-top: 3px;
+}
+
+app-product-list-item {
+    grid-column: 2;
+}
+
+#botoes{
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+#botoes > img {
+    height: 50px;
+    align-self: center;
+    border: 2px solid gainsboro;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+#botoes > img:hover{
+    background-color: gainsboro;
+}
+
+#botoes > img:active{transform: scale(1.03);}
+
+

@@ -1,0 +1,46 @@
+main{
+    padding-top: 4px;
+    padding-bottom:4px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 1px solid gainsboro;
+    padding-left: 30px;
+    padding-right: 30px;
+    -ms-grid-column-align: center;
+}
+
+main:hover{
+    background-color: gainsboro;
+    transform: scale(1.03);
+    border-radius:3px;
+}
+
+
+img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 70px;
+    min-width: 70px;
+}
+
+section{
+    align-self: center;
+    text-align: center;
+}
+
+label{
+    font-size: 13px;
+    opacity: 0.5;
+    margin-bottom: 0;
+}
+
+#remove{
+    height: 40px;
+    min-width: 40px;
+    align-self: center;
+    margin-left: 8px;
+}
+
+#remove:active{
+    transform: scale(1.06);
+}

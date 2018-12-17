@@ -1,0 +1,68 @@
+.w6 {width:16rem;}
+
+.h6 {height: 25rem;}
+
+.ml--2 {margin-left: -2rem;}
+
+.pt4 { padding-top: 17px}
+
+#mainp{
+    font-family: sans-serif;
+    width: 100vw; 
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.192);
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+#img-h{
+    max-height: 50vh;
+    min-height: 80px;
+    min-width: 200px ;
+    width: auto;
+    height: auto;
+
+}
+
+#sad{
+    max-height: 25px;
+    min-height: 5px;
+    width: auto;
+    height: auto;
+}
+
+#indis{
+    color: #ff9f9f;
+}
+
+#nome{
+    color: #0f93ff;
+}
+
+
+.infop{
+    border: 3px solid rgba(0, 0, 0, 0.185);
+    border-radius: 20px;
+    display: inline-block;
+    align-self: center;
+    min-width: 15rem;
+    margin-left: 10vw;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.tam{
+    width: 3rem;
+}
+
+#old{
+    font-size: 12px;
+}

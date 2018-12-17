@@ -1,0 +1,17 @@
+<main>
+  <section id="info">
+    <img src="assets/img/user(2).png">
+    
+    <label>Nome</label>
+    <h4>{{usuario.nome}}</h4>
+    
+    <label>Endereço</label>
+    <h4>{{usuario.endereco}}</h4>
+    
+    <label>E-mail</label>
+    <h4>{{usuario.email}}</h4>
+  </section>
+  <section id="reservas">
+    <app-reserva *ngFor="let reserva of reservas" [reserva] = reserva></app-reserva>
+  </section>
+</main>
